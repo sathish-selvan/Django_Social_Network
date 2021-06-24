@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+home
+{% endblock title %}
+
+{% block content %}
+<h3 class="ui segment clr-obsidian">{{hello}} {{user}}</h3>
+
+{% endblock content %}
+
+{% block scripts %}
+<script>
+$(document).ready(function(){
+    console.log('working')
+})
+</script>
+{% endblock scripts %}

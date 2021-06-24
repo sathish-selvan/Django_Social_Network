@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Find Friends
+{% endblock title %}
+
+{% block content %}
+<ul>
+    {% if is_empty %}
+    <h2>No more user to send request</h2>
+    {%endif%}
+    {% for obj in qs %}
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="row">
+                <div class="three wide column">
+                    <img class="ui small circular image" src={{obj.avatar.url}} alt="">
+                </div>
+                <div class="thirteen wide column">
+                    <h3 class="clr-txt">{{ obj.user }}</h3>
+                    <p class="clr-obsidian"> {{obj.bio}} </p>
+                    <a href="{{ obj.get_absolute_url }}"><button class="ui button primary w-big">See Profile</button></a>
+                    
+                    <form action="{% url 'profiles:send-invite-veiw'  %} " method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" value={{ obj.pk }} name="profile_pk">
+                        <button type="submit" class="ui button secondary mt-5 w-big"><i class="plus square icon"></i>Send
+                            Request</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

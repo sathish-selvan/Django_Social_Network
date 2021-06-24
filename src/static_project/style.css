@@ -1,0 +1,69 @@
+body
+{
+    background: #1a1a1d !important;
+    color: aliceblue !important;
+}
+
+.nav 
+{
+    border-radius: 0px !important;
+    padding : 10px 0 10px 0 !important;
+    background-color: #077777 !important;
+}
+
+.mb-7
+{
+    margin-bottom: 7px !important;
+}
+
+.mt-5
+{
+    margin-top: 5px !important;
+}
+
+.mymodal{
+    color : #1a1a1d !important;
+}
+
+.mb-5{
+    margin-bottom: 5px !important;
+}
+
+.bwhite-lg{
+    background-color: transparent !important;
+
+}
+
+.bwhite-sm{
+    background-color: transparent !important;
+    width: 10px;
+    
+}
+
+.comment-box{
+    display: none;
+}
+
+.clr-txt{
+    color: blueviolet !important;
+}
+
+.clr-obsidian{
+    color: #445055 !important;
+}
+
+.w-big{
+    width: 200px !important;
+}
+
+.m-0{
+    margin-left: -6px !important;
+}
+
+.my-modal {
+    height: 300px !important;
+    top: 200px !important;
+    font-size: 20px !important;
+}
+
+
